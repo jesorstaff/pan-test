@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  font-family: 'Formular', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+
+  @media (max-width: 1280px) {
+    max-width: 1000px;
+    margin: 0 40px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+:root {
+  --gray_light: #8f95ac;
+  --black_light: #2c2e3e;
+  --black_dark: #1e2030;
+  --red: #ff2d23;
+}

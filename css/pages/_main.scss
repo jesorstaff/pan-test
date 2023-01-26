@@ -1,0 +1,102 @@
+main {
+  background: var(--black_dark);
+  padding-top: 150px;
+  padding-bottom: 176px;
+
+  @media (min-width: 1280px) {
+    padding-top: 112px;
+    padding-bottom: 126px;
+  }
+
+  @media (min-width: 767px) {
+    padding-top: 106px;
+    padding-bottom: 136px;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
+
+  &__text {
+    max-width: 597px;
+    color: #fff;
+
+    @media (max-width: 767px) {
+      max-width: 294px;
+    }
+  }
+
+  &__image {
+    
+    @media (min-width: 767px) {
+      margin-left: 40px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__form {
+    margin-top: 47px;
+
+    @media (max-width: 1280px) {
+      margin-top: 37px;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 27px;
+    }
+
+    &-line {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 1280px) {
+        flex-direction: row;
+      }
+
+      p {
+        color: var(--gray_light);
+        @extend .text;
+      }
+    }
+
+    &-col {
+      &:first-child {
+        margin-right: 0;
+      }
+
+      @media (min-width: 1280px) {
+        &:first-child {
+          margin-right: 21px;
+        }
+      }
+    }
+
+    &-input {
+      margin-top: 6px;
+    }
+  }
+
+  .btn {
+    margin-top: 38px;
+    min-width: 220px;
+    padding: 21px;
+  }
+
+  &-checkbox {
+    margin-top: 40px;
+
+    p {
+      @media (max-width: 768px) {
+        max-width: 255px;
+      }
+    }
+  }
+}

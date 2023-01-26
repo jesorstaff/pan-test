@@ -1,0 +1,69 @@
+.map {
+  width: 100%;
+  height: 500px;
+
+  @media (max-width: 1600px) {
+    height: 414px;
+  }
+
+  @media (max-width: 1280px) {
+    height: 251px;
+  }
+
+  .ymaps-2-1-79-balloon {
+    box-shadow: none;
+  }
+
+  .ymaps-2-1-79-balloon__layout {
+    border-radius: 5px;
+  }
+
+  .ymaps-2-1-79-balloon__content {
+    padding: 40px 50px;
+
+    @media (max-width: 1280px) {
+      padding: 25px 35px;
+    }
+  }
+
+  .ymaps-2-1-79-balloon__tail {
+    top: -20px;
+    left: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none !important;
+    width: 40px;
+    height: 40px;
+
+    &:after {
+      content: none;
+    }
+
+    &:before {
+      content: '';
+      border: 40px solid transparent;
+      border-left: 40px solid white;
+      border-top: 40px solid white;
+    }
+  }
+}
+
+.my-balloon {
+  color: var(--black_light);
+
+  &__title {
+    @extend .h5;
+  }
+
+  &__address {
+    margin: 10px 0;
+    @extend .text;
+  }
+
+  &__link {
+    color: var(--red);
+    text-decoration: underline;
+    @extend .text;
+    cursor: pointer;
+  }
+}
